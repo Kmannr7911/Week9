@@ -1,0 +1,47 @@
+<!-- Assuming you have everything imported that is needed to use Bootstrap, create a responsive structure using the grid system as described below.
+
+Template should span the entire width of the screen.
+There should be three columns. The left and right column should each take up 25% the width of the screen when the viewport is anything larger than small. The middle column should take up the remaining 50% of the screen.
+Inside the middle column there should be two more columns, the left column taking up 75% of the width of it's parent and the right column taking up the remaining 25% when the viewport is anything larger than small.
+All columns should stack vertically and respond when the viewport is small. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    .column{
+        @include row-cols(3);
+    }
+    <div class="container">
+        <div class="row allign-items-start">
+          <div class="col-sm-9 col-md-8" style="height: 100 px;"> I am a div height 100px.
+            .container{
+                width: 75%
+            }
+
+        </div>
+          <div class="col-sm-8 col-md-7" style="height: 200;"> I am a div height of 200px.
+            <div class="col-sm-2 col-sm-3" style="height: 150px;">I am a div height of 150px</div>
+            <div class="col-sm-2 col-sm-3" style="height: 150px;"> I am a div height of 150px</div>
+
+            .container{
+                width: 25%
+            }  
+
+            </div>
+          <div class="col-sm-10 col-md-9" style=" height: 300px;"> I am a div height of 300px. 
+            .container{
+                width:25%
+            }
+          </div>  
+        </div>
+    </div>
+
+</body>
+</html>
